@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>E-Portfolio | ชื่อ นามสกุล — วิทยาการคำนวณ ม.6</title>
+<title>E-Portfolio | พิสุทธิ์ศิลป์ เสมารัตน์ — วิทยาการคำนวณ ม.6</title>
 <meta name="description" content="แฟ้มสะสมงานอิเล็กทรอนิกส์ วิชาวิทยาการคำนวณ ม.6 — ทักษะการเขียนโปรแกรม ผลงาน และกิจกรรม">
 <meta name="theme-color" content="#0F1620">
 <meta property="og:type" content="website">
-<meta property="og:title" content="E-Portfolio | ชื่อ นามสกุล">
+<meta property="og:title" content="E-Portfolio | พิสุทธิ์ศิลป์ เสมารัตน์">
 <meta property="og:description" content="แฟ้มสะสมงานอิเล็กทรอนิกส์ วิชาวิทยาการคำนวณ ม.6">
 <meta property="og:url" content="https://phisutsin13.github.io/portfolio/">
 <meta property="og:image" content="https://phisutsin13.github.io/portfolio/assets/profile.jpg">
@@ -119,7 +119,7 @@ nav a.on::after{
 }
 .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
 
-.mask{overflow:hidden;padding-bottom:.06em}
+.mask{display:block;overflow:hidden;padding-bottom:.06em}
 .mask > *{display:block}
 h1.name{font-size:clamp(2.5rem,6.4vw,4.4rem);line-height:1.1}
 .role{max-width:48ch;font-size:clamp(1.02rem,1.4vw,1.1rem);line-height:1.8;color:var(--text-2);margin:20px 0 30px}
@@ -406,7 +406,10 @@ section{position:relative;padding:clamp(56px,7vw,84px) 0}
     <div class="hero-grid">
       <div class="hero-copy">
         <p class="kicker reveal">แฟ้มสะสมงาน · ภาคเรียนที่ 2 ปีการศึกษา 2569</p>
-        <h1 class="name mask" id="hero-title"><span>ชื่อ นามสกุล</span></h1>
+        <h1 class="name" id="hero-title">
+          <span class="mask"><span>พิสุทธิ์ศิลป์</span></span>
+          <span class="mask" style="--d:220ms"><span>เสมารัตน์</span></span>
+        </h1>
         <p class="role reveal" style="--d:420ms">
           นักเรียนชั้นมัธยมศึกษาปีที่ 6 ที่สนใจการเขียนโปรแกรมและการสร้างเว็บไซต์
           เริ่มจาก HTML และ CSS แล้วต่อยอดไปสู่เว็บแอปที่ใช้งานได้จริง
@@ -422,7 +425,7 @@ section{position:relative;padding:clamp(56px,7vw,84px) 0}
 
       <figure class="portrait reveal" style="--d:200ms">
         <div class="frame">
-          <img src="assets/profile.jpg" alt="รูปโปรไฟล์ของ ชื่อ นามสกุล" width="320" height="400">
+          <img src="assets/profile.jpg" alt="รูปโปรไฟล์ของ พิสุทธิ์ศิลป์ เสมารัตน์" width="320" height="400">
         </div>
         <figcaption class="cap"><b>ภาพประจำตัว</b><span>ม.6 / 2569</span></figcaption>
       </figure>
@@ -430,7 +433,7 @@ section{position:relative;padding:clamp(56px,7vw,84px) 0}
 
     <ul class="facts reveal" style="--d:600ms">
       <li><b>ระดับชั้น</b> มัธยมศึกษาปีที่ 6</li>
-      <li><b>โรงเรียน</b> ชื่อโรงเรียน</li>
+      <li><b>โรงเรียน</b> ธัญรัตน์</li>
       <li><b>เป้าหมาย</b> ศึกษาต่อด้านคอมพิวเตอร์</li>
     </ul>
   </div>
@@ -450,7 +453,8 @@ section{position:relative;padding:clamp(56px,7vw,84px) 0}
     <div class="profile-grid">
       <div class="about-copy reveal">
         <p class="lead">
-          ฉันชื่อ <strong>ชื่อ นามสกุล</strong> (ชื่อเล่น) เป็นนักเรียน ม.6 ที่ชอบแก้ปัญหาด้วยการเขียนโปรแกรม
+          ฉันชื่อ <strong>พิสุทธิ์ศิลป์ เสมารัตน์</strong> เป็นนักเรียนชั้น ม.6 ที่โรงเรียนธัญรัตน์
+          ชอบแก้ปัญหาด้วยการเขียนโปรแกรม
           เริ่มเรียนรู้ HTML, CSS และ JavaScript ในรายวิชาวิทยาการคำนวณ
         </p>
         <p class="lead sub">
@@ -459,8 +463,8 @@ section{position:relative;padding:clamp(56px,7vw,84px) 0}
         </p>
         <dl class="spec">
           <div><dt>ระดับชั้น</dt><dd>มัธยมศึกษาปีที่ 6</dd></div>
-          <div><dt>โรงเรียน</dt><dd>ชื่อโรงเรียน</dd></div>
-          <div><dt>วิชาที่ชอบ</dt><dd>วิทยาการคำนวณ, คณิตศาสตร์</dd></div>
+          <div><dt>โรงเรียน</dt><dd>ธัญรัตน์</dd></div>
+          <div><dt>วิชาที่ชอบ</dt><dd>คอมพิวเตอร์</dd></div>
           <div><dt>เป้าหมาย</dt><dd>ศึกษาต่อด้านคอมพิวเตอร์</dd></div>
         </dl>
       </div>
@@ -617,7 +621,7 @@ section{position:relative;padding:clamp(56px,7vw,84px) 0}
     </div>
 
     <div class="footer">
-      <span>© 2026 ชื่อ นามสกุล · จัดทำเพื่อการเรียนรู้ในรายวิชาวิทยาการคำนวณ</span>
+      <span>© 2026 พิสุทธิ์ศิลป์ เสมารัตน์ · จัดทำเพื่อการเรียนรู้ในรายวิชาวิทยาการคำนวณ</span>
       <a href="#home">
         กลับขึ้นด้านบน
         <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
