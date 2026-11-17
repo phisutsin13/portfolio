@@ -14,7 +14,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1620'/%3E%3Crect x='9.5' y='9.5' width='13' height='13' rx='2' fill='none' stroke='%23C6A664' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Sans+Thai+Looped:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600&family=Noto+Serif+Thai:wght@500;600;700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 /* ── tokens ─────────────────────────────────────────── */
@@ -32,8 +32,8 @@
   --gold:#C6A664;
   --gold-2:#DCC08A;
   --gold-soft:rgba(198,166,100,.14);
-  --sans:"IBM Plex Sans Thai",system-ui,-apple-system,sans-serif;
-  --display:"IBM Plex Sans Thai Looped","IBM Plex Sans Thai",system-ui,sans-serif;
+  --sans:"Noto Sans Thai",system-ui,-apple-system,sans-serif;
+  --display:"Noto Serif Thai",Georgia,"Times New Roman",serif;
   --r:16px;
   --ease:cubic-bezier(.22,.75,.24,1);
   --page:min(1080px,100% - 40px);
@@ -49,9 +49,9 @@ body{
 img{max-width:100%;display:block}
 p{margin:0 0 1.05em;text-wrap:pretty}
 a{color:var(--gold);text-underline-offset:3px;text-decoration-thickness:1px}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.24;letter-spacing:0;text-wrap:balance;margin:0}
-h2{font-size:clamp(1.6rem,3vw,2.15rem)}
-h3{font-size:1.16rem;line-height:1.4}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.35;letter-spacing:0;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.55rem,2.8vw,2rem)}
+h3{font-size:1.15rem;line-height:1.45}
 ::selection{background:var(--gold);color:#12181F}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
 
@@ -112,17 +112,17 @@ nav a.on::after{
 }
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) clamp(200px,25%,272px);gap:clamp(28px,5vw,64px);align-items:center}
 .kicker{
-  display:inline-flex;align-items:center;gap:10px;margin:0 0 20px;
+  display:inline-flex;align-items:center;gap:10px;margin:0 0 30px;
   font-size:.82rem;color:var(--text-2);
   padding:5px 13px 5px 10px;border:1px solid var(--line);border-radius:999px;
   background:rgba(231,235,240,.03);
 }
 .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
 
-.mask{display:block;overflow:hidden;padding-bottom:.06em}
-.mask > *{display:block}
-h1.name{font-size:clamp(2.5rem,6.4vw,4.4rem);line-height:1.1}
-.role{max-width:48ch;font-size:clamp(1.02rem,1.4vw,1.1rem);line-height:1.8;color:var(--text-2);margin:20px 0 30px}
+.line{display:block}
+.line > span{display:block}
+h1.name{font-size:clamp(2.5rem,6.4vw,4.4rem);line-height:1.4}
+.role{max-width:60ch;font-size:clamp(1.02rem,1.4vw,1.1rem);line-height:1.8;color:var(--text-2);margin:20px 0 30px}
 .actions{display:flex;flex-wrap:wrap;gap:11px;align-items:center}
 
 .btn{
@@ -324,12 +324,15 @@ section{position:relative;padding:clamp(56px,7vw,84px) 0}
 .js .reveal{opacity:0;transform:translateY(10px);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:var(--d,0ms)}
 .js .reveal.seen{opacity:1;transform:none}
 
-.js .mask > *{animation:rise .85s var(--ease) both;animation-delay:var(--d,80ms)}
-@keyframes rise{from{transform:translateY(110%)}to{transform:translateY(0)}}
+.js .line > span{animation:rise .9s var(--ease) both;animation-delay:var(--d,80ms)}
+@keyframes rise{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .js .reveal,.js .mask > *{opacity:1!important;transform:none!important;transition:none!important;animation:none!important}
+  .js .reveal,.js .line > span{opacity:1!important;transform:none!important;transition:none!important;animation:none!important}
   .meter i{transition:none}
 }
 
@@ -407,8 +410,8 @@ section{position:relative;padding:clamp(56px,7vw,84px) 0}
       <div class="hero-copy">
         <p class="kicker reveal">แฟ้มสะสมงาน · ภาคเรียนที่ 2 ปีการศึกษา 2569</p>
         <h1 class="name" id="hero-title">
-          <span class="mask"><span>พิสุทธิ์ศิลป์</span></span>
-          <span class="mask" style="--d:220ms"><span>เสมารัตน์</span></span>
+          <span class="line"><span>พิสุทธิ์ศิลป์</span></span>
+          <span class="line" style="--d:220ms"><span>เสมารัตน์</span></span>
         </h1>
         <p class="role reveal" style="--d:420ms">
           นักเรียนชั้นมัธยมศึกษาปีที่ 6 ที่สนใจการเขียนโปรแกรมและการสร้างเว็บไซต์
@@ -615,7 +618,7 @@ section{position:relative;padding:clamp(56px,7vw,84px) 0}
       <h2>แหล่งอ้างอิง</h2>
       <ul>
         <li>สร้างโครงร่างเว็บไซต์ด้วย AI (ระบุชื่อเครื่องมือที่ใช้) แล้วตรวจแก้โดยผู้จัดทำ</li>
-        <li>ฟอนต์ IBM Plex Sans Thai และ IBM Plex Sans Thai Looped จาก Google Fonts (SIL Open Font License)</li>
+        <li>ฟอนต์ Noto Sans Thai และ Noto Serif Thai จาก Google Fonts (SIL Open Font License)</li>
         <li>เอกสารประกอบการเรียน: GitHub Docs — Creating a GitHub Pages site</li>
       </ul>
     </div>
