@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Portfolio | ชื่อ นามสกุล</title>
+<meta name="description" content="แฟ้มสะสมงานอิเล็กทรอนิกส์ วิชาวิทยาการคำนวณ ม.6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B2A5B;--blue:#1F5FBF;--sky:#E8F0FC;--ink:#1A2438;--mute:#5B6780;--line:#D3DDEF;--bg:#fff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:"IBM Plex Sans Thai",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:17px}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+header{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff}
+.bar{max-width:1040px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-weight:700;color:#fff;text-decoration:none}
+nav ul{list-style:none;padding:0;display:flex;gap:4px}
+nav a{color:#CFE0FF;text-decoration:none;padding:8px 12px;border-radius:6px;font-size:15px}
+nav a:hover,nav a.on{background:#fff;color:var(--navy)}
+#menu{display:none;background:none;border:1px solid #6F8FCB;color:#fff;border-radius:6px;padding:6px 12px;font:inherit}
+main{max-width:1040px;margin:auto;padding:0 20px}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font-size:30px;color:var(--navy);margin-bottom:24px;line-height:1.3}
+#home{display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:center;min-height:78vh}
+.hello{border-left:6px solid var(--blue);padding-left:24px}
+.hello p.small{color:var(--mute);margin-bottom:8px}
+h1{font-size:clamp(40px,7vw,76px);line-height:1.1;color:var(--navy);font-weight:700}
+.role{font-size:20px;margin:16px 0 28px;color:var(--ink)}
+.btn{display:inline-block;padding:11px 24px;border-radius:6px;background:var(--navy);color:#fff;text-decoration:none;font-weight:500;margin-right:10px}
+.btn.alt{background:none;color:var(--navy);border:2px solid var(--navy);padding:9px 22px}
+.photo{aspect-ratio:4/5;background:var(--sky);border:1px solid var(--line);border-radius:6px;display:grid;place-items:center;overflow:hidden;color:var(--blue);font-size:64px;font-weight:700}
+.photo img{width:100%;height:100%;object-fit:cover}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+dl{display:grid;grid-template-columns:130px 1fr;gap:8px 16px}
+dt{color:var(--mute)}dd{font-weight:500}
+.skills{list-style:none;padding:0;display:grid;gap:14px}
+.skills span{display:flex;justify-content:space-between;font-weight:500}
+.meter{height:8px;background:var(--sky);border-radius:4px;overflow:hidden;margin-top:4px}
+.meter i{display:block;height:100%;background:var(--blue)}
+.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.item{border:1px solid var(--line);border-top:4px solid var(--blue);padding:22px;border-radius:4px;background:#fff}
+.item h3{color:var(--navy);font-size:20px;margin-bottom:6px}
+.item p{color:var(--mute);margin-bottom:12px;font-size:16px}
+.tags{font-size:14px;color:var(--blue);margin-bottom:12px}
+.timeline{list-style:none;padding:0;border-left:3px solid var(--line);margin-left:6px}
+.timeline li{padding:0 0 22px 22px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-9px;top:9px;width:15px;height:15px;border-radius:50%;background:var(--blue);border:3px solid #fff}
+.timeline b{color:var(--navy)}.timeline small{display:block;color:var(--mute)}
+.contact a{display:block;margin-bottom:6px}
+footer{max-width:1040px;margin:auto;padding:28px 20px 48px;color:var(--mute);font-size:15px}
+@media(max-width:760px){
+ #menu{display:block}
+ nav{position:absolute;left:0;right:0;top:56px;background:var(--navy);display:none;padding:8px 20px 16px}
+ nav.open{display:block}nav ul{flex-direction:column}
+ #home{grid-template-columns:1fr;min-height:0;padding-top:40px}.photo{max-width:240px}
+ .two{grid-template-columns:1fr}section{padding:52px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+ <div class="bar">
+  <a class="brand" href="#home">E-Portfolio</a>
+  <button id="menu" aria-expanded="false" aria-controls="nav">เมนู</button>
+  <nav id="nav" aria-label="เมนูหลัก">
+   <ul>
+    <li><a href="#home">หน้าแรก</a></li>
+    <li><a href="#about">เกี่ยวกับฉัน</a></li>
+    <li><a href="#skills">ทักษะ</a></li>
+    <li><a href="#projects">ผลงาน</a></li>
+    <li><a href="#activities">กิจกรรม</a></li>
+    <li><a href="#contact">ติดต่อ</a></li>
+   </ul>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section id="home">
+ <div class="hello">
+  <p class="small">แฟ้มสะสมงานอิเล็กทรอนิกส์ · วิทยาการคำนวณ ม.6</p>
+  <h1 id="name">ชื่อ นามสกุล</h1>
+  <p class="role">นักเรียนชั้นมัธยมศึกษาปีที่ 6 ผู้สนใจการเขียนโปรแกรมและการสร้างเว็บไซต์</p>
+  <a class="btn" href="#projects">ดูผลงาน</a>
+  <a class="btn alt" href="#contact">ติดต่อ</a>
+ </div>
+ <div class="photo" aria-label="รูปโปรไฟล์">
+  <!-- วางรูปที่ assets/photo.jpg แล้วลบเครื่องหมายคอมเมนต์บรรทัดล่าง -->
+  <!-- <img src="assets/photo.jpg" alt="รูปโปรไฟล์ของ ชื่อ นามสกุล"> -->
+  <span aria-hidden="true">ช</span>
+ </div>
+</section>
+
+<section id="about">
+ <h2>เกี่ยวกับฉัน</h2>
+ <div class="two">
+  <p>ฉันชื่อ ชื่อ นามสกุล (ชื่อเล่น) เป็นนักเรียน ม.6 ที่ชอบแก้ปัญหาด้วยการเขียนโปรแกรม เริ่มเรียนรู้ HTML, CSS และ JavaScript ในรายวิชาวิทยาการคำนวณ และใช้ AI ช่วยวางโครงสร้างงาน จากนั้นตรวจสอบและปรับปรุงด้วยตนเอง</p>
+  <dl>
+   <dt>ระดับชั้น</dt><dd>มัธยมศึกษาปีที่ 6</dd>
+   <dt>โรงเรียน</dt><dd>ชื่อโรงเรียน</dd>
+   <dt>วิชาที่ชอบ</dt><dd>วิทยาการคำนวณ, คณิตศาสตร์</dd>
+   <dt>เป้าหมาย</dt><dd>ศึกษาต่อด้านคอมพิวเตอร์</dd>
+  </dl>
+ </div>
+</section>
+
+<section id="skills">
+ <h2>ทักษะ</h2>
+ <ul class="skills">
+  <li><span>HTML <em>80%</em></span><div class="meter"><i style="width:80%"></i></div></li>
+  <li><span>CSS <em>70%</em></span><div class="meter"><i style="width:70%"></i></div></li>
+  <li><span>JavaScript <em>60%</em></span><div class="meter"><i style="width:60%"></i></div></li>
+  <li><span>การใช้ GitHub <em>65%</em></span><div class="meter"><i style="width:65%"></i></div></li>
+  <li><span>การเขียน Prompt สั่ง AI <em>75%</em></span><div class="meter"><i style="width:75%"></i></div></li>
+ </ul>
+</section>
+
+<section id="projects">
+ <h2>ผลงาน</h2>
+ <div class="work">
+  <article class="item">
+   <h3>เครื่องคิดเลขค่าใช้จ่าย</h3>
+   <p>เว็บแอปเล็ก ๆ สำหรับบวกรายการค่าใช้จ่ายและดูยอดรวม เขียนด้วย HTML, CSS และ JavaScript ในไฟล์เดียว</p>
+   <div class="tags">HTML · CSS · JavaScript</div>
+   <a href="projects/calculator.html">เปิดผลงาน</a> ·
+   <a href="https://github.com/USERNAME/e-portfolio/blob/main/projects/calculator.html" target="_blank" rel="noopener">ดูโค้ดบน GitHub</a>
+  </article>
+  <article class="item">
+   <h3>ผลงานชิ้นที่ 2 (ตัวอย่าง)</h3>
+   <p>ใส่คำอธิบายผลงาน เป้าหมาย และสิ่งที่ได้เรียนรู้ที่นี่</p>
+   <div class="tags">ระบุเทคโนโลยีที่ใช้</div>
+   <a href="#projects">ลิงก์ผลงาน</a>
+  </article>
+ </div>
+</section>
+
+<section id="activities">
+ <h2>กิจกรรมและความสำเร็จ</h2>
+ <ul class="timeline">
+  <li><b>สร้าง e-Portfolio ด้วย AI</b><small>ปีการศึกษา 2569 · วิทยาการคำนวณ ม.6</small>ใช้ AI ช่วยร่างเว็บไซต์ แล้วปรับเนื้อหาและการออกแบบเอง เผยแพร่ผ่าน GitHub Pages</li>
+  <li><b>ชื่อกิจกรรม</b><small>วัน/เดือน/ปี</small>อธิบายสิ่งที่ทำและสิ่งที่ได้เรียนรู้</li>
+ </ul>
+</section>
+
+<section id="contact" class="contact">
+ <h2>ติดต่อ</h2>
+ <a href="mailto:your.email@example.com">your.email@example.com</a>
+ <a href="https://github.com/USERNAME" target="_blank" rel="noopener">github.com/USERNAME</a>
+ <p style="color:var(--mute);margin-top:12px;font-size:15px">เพื่อความปลอดภัย ไม่ควรเผยแพร่เลขบัตรประชาชน ที่อยู่บ้าน หรือเบอร์โทรส่วนตัวบนเว็บไซต์สาธารณะ</p>
+</section>
+
+<section id="refs" style="border:0">
+ <h2>แหล่งอ้างอิง</h2>
+ <ul style="padding-left:20px">
+  <li>สร้างโครงร่างเว็บไซต์ด้วย AI (ระบุชื่อเครื่องมือที่ใช้) แล้วตรวจแก้โดยผู้จัดทำ</li>
+  <li>ฟอนต์ IBM Plex Sans Thai จาก Google Fonts (SIL Open Font License)</li>
+  <li>เอกสารประกอบการเรียน: GitHub Docs — Creating a GitHub Pages site</li>
+ </ul>
+</section>
+</main>
+
+<footer>© 2026 ชื่อ นามสกุล · จัดทำเพื่อการเรียนรู้ในรายวิชาวิทยาการคำนวณ</footer>
+
+<script>
+const nav=document.getElementById('nav'),btn=document.getElementById('menu');
+btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded',false)}));
+const links=[...nav.querySelectorAll('a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('main section[id]').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
