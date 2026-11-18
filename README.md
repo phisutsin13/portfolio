@@ -189,7 +189,6 @@ git push origin main
 
 ## แหล่งอ้างอิง
 
-- ฟอนต์ [Noto Sans Thai](https://fonts.google.com/noto/specimen/Noto+Sans+Thai) และ [Noto Serif Thai](https://fonts.google.com/noto/specimen/Noto+Serif+Thai) จาก Google Fonts (SIL Open Font License)
 - วิธีทำ GitHub Pages จาก [GitHub Docs](https://docs.github.com/en/pages)
 - โครงเว็บร่างแรกสร้างด้วยความช่วยเหลือจาก AI
 
